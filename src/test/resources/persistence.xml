@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+
+<persistence-unit name="hrPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>entity.Job</class>
+    <class>entity.Employee</class>
+    <class>entity.Department</class>
+    <class>entity.JobHistoryIds</class>
+    <class>entity.Dependence</class>
+    <class>entity.JobHistory</class>
+
+
+    <!-- Entity classes go here -->
+    <!-- <class>com.example.model.YourEntity</class> -->
+
+    <properties>
+        <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:8080;;encrypt=true;trustServerCertificate=true;databaseName=hsf_buoi1"/>
+        <property name="javax.persistence.jdbc.user" value="sa"/>
+        <property name="javax.persistence.jdbc.password" value="123"/>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+        <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <property name="hibernate.show_sql" value="true"/>
+        <property name="hibernate.format_sql" value="true"/>
+
+        <!-- Optional: set context classloader (for non-container use) -->
+        <property name="hibernate.archive.autodetection" value="class"/>
+    </properties>
+</persistence-unit>
+</persistence>
