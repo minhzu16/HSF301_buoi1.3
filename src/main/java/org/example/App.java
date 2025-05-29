@@ -23,7 +23,7 @@ public class App
         Job job = new Job();
         job.setJobTitle("Java Developer");
         job.setMaxSalary(new BigDecimal(5000));
-        job.setMinSalary(new BigDecimal(1000));
+        job.setMinSalary(new BigDecimal(2000));
 
         JobRepository jobRepository = new JobRepositoryImpl();
 //        System.out.println(jobRepository.save(job));
